@@ -108,7 +108,6 @@ function renderSocials() {
 renderExperience();
 renderEducation();
 renderCards(portfolioData.codingProjects, '#coding-projects');
-renderCards(portfolioData.dataAnalysis, '#data-analysis');
 renderCertifications();
 renderSocials();
 document.querySelector('#current-year').textContent = new Date().getFullYear();
