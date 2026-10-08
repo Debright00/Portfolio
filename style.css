@@ -154,9 +154,9 @@ button { color: inherit; font: inherit; }
 /* =========================================================
    CERTIFICATIONS SECTION
    ========================================================= */
-.certifications-section { padding-bottom: var(--space-section); }
+.certifications-section { padding-bottom: clamp(3rem, 6vw, 5rem); }
 .certification-list { border-top: 1px solid var(--color-line); }
-.certification-item { display: grid; grid-template-columns: 55px 1fr auto; gap: 1rem; align-items: center; padding: 1.25rem 0; border-bottom: 1px solid var(--color-line); color: var(--color-muted); font: 12px var(--font-mono); }
+.certification-item { display: grid; grid-template-columns: 55px 1fr auto; gap: 1rem; align-items: center; padding: 1.25rem 0; border-bottom: 1px solid var(--color-line); color: #aab8b0; font: 14px/1.5 var(--font-mono); }
 .certification-number, .certification-arrow { color: var(--color-accent); }
 
 /* =========================================================
