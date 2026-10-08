@@ -36,7 +36,12 @@ function renderEducation() {
 // Shared expandable card renderer for coding projects and data analysis entries.
 function renderCards(entries, targetSelector) {
   document.querySelector(targetSelector).innerHTML = entries.map((card, index) => {
-    const imageSet = Array.isArray(card.images) && card.images.length ? card.images : [card.image];
+    const normalizedImageSet = Array.isArray(card.images)
+      ? card.images
+      : Array.isArray(card.image)
+        ? card.image
+        : [card.image].filter(Boolean);
+    const imageSet = normalizedImageSet.length ? normalizedImageSet : ["assets/placeholder.png"];
     const galleryButtons = imageSet.length > 1 ? `
       <div class="gallery-controls" aria-label="Image navigation">
         <button class="gallery-button gallery-prev" type="button" aria-label="Previous image">←</button>
